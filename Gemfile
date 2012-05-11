@@ -60,11 +60,14 @@ group :test do
   gem 'launchy'
   gem 'headless'
 
+  # Clean out the database
+  gem 'database_cleaner'
+
   # Guards
   gem 'guard'
   gem 'guard-spork'
   gem 'guard-cucumber'
-  gem 'guard-rspec', '0.5.5'
+  gem 'guard-rspec'
   gem 'guard-bundler'
   gem 'guard-livereload'
   gem 'guard-rails'

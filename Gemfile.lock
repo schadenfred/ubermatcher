@@ -284,7 +284,7 @@ DEPENDENCIES
   guard-cucumber
   guard-livereload
   guard-rails
-  guard-rspec (= 0.5.5)
+  guard-rspec
   guard-sass
   guard-spork
   haml-rails
