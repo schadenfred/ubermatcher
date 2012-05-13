@@ -10,6 +10,7 @@ gem 'thin'
 
 # Authentication
 gem 'devise'
+gem 'omniauth'
 
 group :assets do
   gem 'sass-rails',   '~> 3.2.3'
@@ -32,6 +33,7 @@ gem 'best_in_place'
 group :test, :development do
   gem 'faker'
   gem 'hpricot'
+  gem 'ruby_parser'
   gem 'taps'
   gem 'heroku'
   gem 'debugger'
