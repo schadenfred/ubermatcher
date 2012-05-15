@@ -3,7 +3,15 @@ Ubermatcher::Application.routes.draw do
   devise_for :users
 
   resources :matches
-  root to: 'matches#index' 
+
+  match '/contact',             :to => 'pages#contact'
+  match '/about',               :to => 'pages#about'
+  match '/help',                :to => 'pages#help'
+  match '/terms',               :to => 'pages#terms'
+  match '/privacy',             :to => 'pages#privacy'
+  match '/signup',              :to => 'registrations#new'
+  
+  root to: 'pages#home' 
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
