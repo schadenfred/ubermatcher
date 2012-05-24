@@ -3,34 +3,8 @@
   %head
     = render 'layouts/head'
   %body
-    .navbar.navbar-fixed-top
-      .navbar-inner
-        .container-fluid
-          %a.btn.btn-navbar{"data-target" => ".nav-collapse", "data-toggle" => "collapse"}
-            %span.icon-bar
-            %span.icon-bar
-            %span.icon-bar
-          %a.brand{:href => "#"} UberMatcher
-          .btn-group.pull-right
-            %a.btn.dropdown-toggle{"data-toggle" => "dropdown", :href => "#"}
-              %i.icon-user
-              Username
-              %span.caret
-            %ul.dropdown-menu
-              %li
-                %a{:href => "#"} Profile
-              %li.divider
-              %li
-                %a{:href => "#"} Sign Out
-          .nav-collapse
-            %ul.nav
-              %li.active
-                %a{:href => "#"} Home
-              %li
-                %a{:href => "#about"} About
-              %li
-                %a{:href => "#contact"} Contact
-          / /.nav-collapse
+    %header
+      = render 'layouts/header'
     .container-fluid
       .row-fluid
         .span3
@@ -74,29 +48,29 @@
             %h2 Helping nerds breed since 2012
             %p
               %a.btn.btn-primary.btn-large Learn more »
+        .span9
           .row-fluid
-            .span4
-              %h2.span.badge.badge-info Step 1: 
-            .span4
-              %h2.span.badge.badge-info Step 2:  
-            .span4
-              %h2.span.badge.badge-info Step 3: 
+            .span3
+              %h2.span.badge.badge-info Step 1:
+              %h3.span3 Violate the privacy of your nerds 
+            .span3
+              %h2.span.badge.badge-info Step 2:
+              %h3.span3 Match up your nerds
+            .span3
+              %h2.span.badge.badge-info Step 3:
+              %h3.span3 Watch your nerds breed
           .row-fluid
             .span4
               %p
-              %h3 Import your list of single friends
-              %p Import your list of single friends who you haven't been able to set up already, because they are nerds, from Facebook.
+                Import your list of single friends who you haven't been able to set up already, because they are nerds, from Facebook.
               %p
                 %a.btn{:href => "#"} View details »
             .span4
               %p
-              %h3 Play the UberMatching game
-              %p Talk to other matchmakers, review their friend lists, and decide on where to set your (mutual) friends up on a blind date.
+                Work with other ubermatchers to make introductions between compatible nerds.  Talk to other matchmakers, review their friend lists, and decide on where to set your (mutual) friends up on a blind date.
               %p
                 %a.btn{:href => "#"} View details »
             .span4
-              %p
-              %h3 Watch your nerds breeding
               %p Not on a video, loser.  On Facebook.  Using our app.  Over a period of years.  Get points for second dates, relationships, marriages, and children.  Yes, even if the kids are ugly.
               %p
                 %a.btn{:href => "#"} View details »

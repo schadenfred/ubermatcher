@@ -1,27 +1,14 @@
-
 development:
-  adapter: postgresql
-  encoding: unicode
-  database: ubermatcher_development
+  adapter: sqlite3
+  database: db/development.ubermatcher
   pool: 5
-  username: 
-  password:
+  timeout: 5000
 
 test: &test
-  adapter: postgresql
-  encoding: unicode
-  database: ubermatcher_test
+  adapter: sqlite3
+  database: db/test.ubermatcher
   pool: 5
-  username: 
-  password: 
-
-production:
-  adapter: postgresql
-  encoding: unicode
-  database: ubermatcher_production
-  pool: 5
-  username: 
-  password:
+  timeout: 5000
 
 cucumber:
   <<: *test

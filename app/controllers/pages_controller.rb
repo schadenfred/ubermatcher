@@ -15,5 +15,6 @@ class PagesController < ApplicationController
   end
 
   def home
+    @users = User.all
   end
 end

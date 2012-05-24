@@ -2,8 +2,9 @@ source 'https://rubygems.org'
 
 gem 'rails', '3.2.3'
 
-# Database
-gem 'pg'
+group :production do
+  gem 'pg'
+end
 
 # Development Server
 gem 'thin'
@@ -11,6 +12,8 @@ gem 'thin'
 # Authentication
 gem 'devise'
 gem 'omniauth'
+gem 'omniauth-facebook'
+gem 'koala'
 
 group :assets do
   gem 'sass-rails',   '~> 3.2.3'
@@ -31,6 +34,7 @@ gem 'bourbon'
 gem 'best_in_place'
 
 group :test, :development do
+  gem 'sqlite3'
   gem 'faker'
   gem 'hpricot'
   gem 'ruby_parser'
@@ -42,8 +46,6 @@ group :test, :development do
   gem 'rspec-rails'
   gem 'steak'
   gem 'factory_girl_rails'
-  gem 'factory_girl_rails'
-
   gem 'shoulda-matchers'
 end
 

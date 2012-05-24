@@ -11,6 +11,10 @@ Ubermatcher::Application.routes.draw do
   match '/privacy',             :to => 'pages#privacy'
   match '/signup',              :to => 'registrations#new'
   
+  authenticated :user do
+    root :to => 'pages#home'
+  end
+
   root to: 'pages#home' 
   # The priority is based upon order of creation:
   # first created -> highest priority.
