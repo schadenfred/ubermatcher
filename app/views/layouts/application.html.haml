@@ -8,39 +8,7 @@
     .container-fluid
       .row-fluid
         .span3
-          .well.sidebar-nav
-            %ul.nav.nav-list
-              %li.nav-header Sidebar
-              %li.active
-                %a{:href => "#"} Link
-              %li
-                %a{:href => "#"} Link
-              %li
-                %a{:href => "#"} Link
-              %li
-                %a{:href => "#"} Link
-              %li.nav-header Sidebar
-              %li
-                %a{:href => "#"} Link
-              %li
-                %a{:href => "#"} Link
-              %li
-                %a{:href => "#"} Link
-              %li
-                %a{:href => "#"} Link
-              %li
-                %a{:href => "#"} Link
-              %li
-                %a{:href => "#"} Link
-              %li.nav-header Sidebar
-              %li
-                %a{:href => "#"} Link
-              %li
-                %a{:href => "#"} Link
-              %li
-                %a{:href => "#"} Link
-          / /.well
-        / /span
+          = render 'layouts/sidebar'
         .span9
           .hero-unit
             %h1#logo
