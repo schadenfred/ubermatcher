@@ -1,2 +1,36 @@
-- @users.each do |user|
-  %p User: #{user.name}
+- content_for :column1 do
+  = render 'layouts/sidebar'
+= content_for :column2 do
+  .hero-unit
+    %h1#logo
+      UberMatcher
+    %h2 Helping nerds breed since 2012
+    %p
+      %a.btn.btn-primary.btn-large Start the breeding »
+  .row-fluid
+    .span4
+      %h2.span.badge.badge-info Step 1: 
+    .span4
+      %h2.span.badge.badge-info Step 2: 
+    .span4
+      %h2.span.badge.badge-info Step 3:  
+  .row-fluid
+    .span4
+      %h3 Violate the privacy of your nerds
+    .span4
+      %h3 Match up your nerds
+    .span4
+      %h3 Watch your nerds breed
+  .row-fluid
+    .span4 
+      Import your list of single friends who you haven't been able to set up already, because they are nerds, from Facebook.
+      %p
+        %a.btn{:href => "#"} View details » 
+    .span4
+      Work with other ubermatchers to make introductions between compatible nerds.  Talk to other matchmakers, review their friend lists, and decide on where to set your (mutual) friends up on a blind date.
+      %p
+        %a.btn{:href => "#"} View details »
+    .span4
+      Not on a video, pervert.  On Facebook.  Using our app.  Over a period of years.  Get points for second dates, relationships, marriages, and children.  Yes, even if the kids are ugly.
+      %p
+        %a.btn{:href => "#"} View details »
