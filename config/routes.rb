@@ -1,8 +1,10 @@
 Ubermatcher::Application.routes.draw do
 
-  devise_for :users
+  devise_for :users, :controllers => {:sessions => 'sessions', :confirmations => 'confirmations'}
 
-  resources :matches
+  devise_scope :user do
+    put "/confirm" => "confirmations#confirm"
+  end
 
   match '/contact',             :to => 'pages#contact'
   match '/about',               :to => 'pages#about'

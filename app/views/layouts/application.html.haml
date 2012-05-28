@@ -5,6 +5,7 @@
   %body
     %header
       = render 'layouts/header'
+      = javascript_include_tag "application"
     .container-fluid
       .row-fluid
         .span3
@@ -15,21 +16,23 @@
       %hr
         %footer
           %p © Company 2012
+          = debug(params) if Rails.env.development?
+
     / /.fluid-container
     /
       Le javascript
       \==================================================
     / Placed at the end of the document so the pages load faster
-    %script{:src => "../assets/js/jquery.js"}
-    %script{:src => "../assets/js/bootstrap-transition.js"}
-    %script{:src => "../assets/js/bootstrap-alert.js"}
-    %script{:src => "../assets/js/bootstrap-modal.js"}
-    %script{:src => "../assets/js/bootstrap-dropdown.js"}
-    %script{:src => "../assets/js/bootstrap-scrollspy.js"}
-    %script{:src => "../assets/js/bootstrap-tab.js"}
-    %script{:src => "../assets/js/bootstrap-tooltip.js"}
-    %script{:src => "../assets/js/bootstrap-popover.js"}
-    %script{:src => "../assets/js/bootstrap-button.js"}
-    %script{:src => "../assets/js/bootstrap-collapse.js"}
-    %script{:src => "../assets/js/bootstrap-carousel.js"}
-    %script{:src => "../assets/js/bootstrap-typeahead.js"}
+    / %script{:src => "../assets/js/jquery.js"}
+    / %script{:src => "../assets/js/bootstrap-transition.js"}
+    / %script{:src => "../assets/js/bootstrap-alert.js"}
+    / %script{:src => "../assets/js/bootstrap-modal.js"}
+    / %script{:src => "../assets/js/bootstrap-dropdown.js"}
+    / %script{:src => "../assets/js/bootstrap-scrollspy.js"}
+    / %script{:src => "../assets/js/bootstrap-tab.js"}
+    / %script{:src => "../assets/js/bootstrap-tooltip.js"}
+    / %script{:src => "../assets/js/bootstrap-popover.js"}
+    / %script{:src => "../assets/js/bootstrap-button.js"}
+    / %script{:src => "../assets/js/bootstrap-collapse.js"}
+    / %script{:src => "../assets/js/bootstrap-carousel.js"}
+    / %script{:src => "../assets/js/bootstrap-typeahead.js"}

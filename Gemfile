@@ -47,6 +47,13 @@ group :test, :development do
   gem 'steak'
   gem 'factory_girl_rails'
   gem 'shoulda-matchers'
+
+  # Generate routes for viewing at /rails/routes
+  gem 'sextant'
+
+  # Catch mail in development for inspection
+  gem 'mailcatcher'
+  
 end
 
 group :test do

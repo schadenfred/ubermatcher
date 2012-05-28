@@ -1,9 +1,9 @@
 - content_for :column1 do
   %blockquote.pull-right
 - content_for :column2 do
-  .row-fluid
-  %legend Step 1: Sign up All we need is your email address.
-  = simple_form_for(resource, :as => resource_name, html: { class: 'form-horizontal' }, :url => user_registration_path(resource)) do |f|
+  %br/
+  %legend Step 1: Sign up 
+  = simple_form_for(resource, :as => resource_name, html: { class: 'form-horizontal' }, :url => registration_path(resource_name)) do |f|
     - if f.error_notification
       .alert.alert-error.fade.in
         %a.close{"data-dismiss" => "alert", :href => "#"} ×
@@ -11,4 +11,3 @@
     = f.input :email
     .form-actions
       = f.button :submit, "Sign up to get a confirmation email", class: 'btn-large btn-primary'
-    = render :partial => "shared/links"
