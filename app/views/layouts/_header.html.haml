@@ -8,22 +8,28 @@
       %a.brand{:href => "#"} UberMatcher
       .btn-group.pull-right
         %a.btn.dropdown-toggle{"data-toggle" => "dropdown", :href => "#"}
-          / %i.icon-user
-          / Sign in or sign up
-          / %span.care 
           - if user_signed_in?
             %i.icon-user 
-            = current_user.name
+            = current_user.email
           - else
             %i.icon-user 
             Sign in or Signup
           / %span.care
         %ul.dropdown-menu
-          %li
-            %a{:href => "#"} Profile
-          %li.divider
-          %li
-            %a{:href => "#"} Sign Out
+          - if user_signed_in?
+            %li
+              %a{:href => "#"} Settings
+            %li.divider
+            %li
+              /%a{:href => "#"} Sign Out
+              = link_to("Sign out", destroy_user_session_path)
+          - else
+            %li
+              %a{:href => "#"} Sign Up
+            %li.divider
+            %li
+              %a{:href => "#"} Sign in
+              = link_to("Sign In", new_user_session_path)
       .nav-collapse
         %ul.nav
           %li.active
