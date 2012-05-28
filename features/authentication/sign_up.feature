@@ -3,14 +3,18 @@ Feature: Sign up
   As an unregistered user
   I want to sign up
 
-  Background:
+  Scenario: Unregistered user signs up
     Given no emails have been sent
     And no user exists with an email of "sarahsilverman@test.com"
     And I am not logged in
-    And I am on the home page
-    And I follow the "Sign up" link
-    Then I should see "| Sign up" in the title
+    # And I am on the home page
+    # And I follow the "Sign up" link
+    # Then I should see "| Sign up" in the title
 
+  Scenario: unregistered user signs up with Facebook
+  
+  
+    @wip
     Scenario: Unregistered user signs up with valid email
       And I fill in the following:
         | Email                 | sarah.silverman@test.com     |
@@ -33,7 +37,8 @@ Feature: Sign up
       And I press "Choose my subdomain"
       Then I should see "| Thankyous" in the title
       
-
+      
+    @wip
     Scenario: Unregistered user signs up with invalid email
       And I fill in the following:
         | Email                 | invalidemail    |
