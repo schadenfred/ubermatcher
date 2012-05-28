@@ -8,15 +8,15 @@
       %a.brand{:href => "#"} UberMatcher
       .btn-group.pull-right
         %a.btn.dropdown-toggle{"data-toggle" => "dropdown", :href => "#"}
-          %i.icon-user
-          Sign in or sign up
-          %span.care 
-          / - if user_signed_in?
-          /   %i.icon-user 
-          /   = current_user.name
-          / - else
-          /   %i.icon-user 
-          /   Sign in or Signup
+          / %i.icon-user
+          / Sign in or sign up
+          / %span.care 
+          - if user_signed_in?
+            %i.icon-user 
+            = current_user.name
+          - else
+            %i.icon-user 
+            Sign in or Signup
           / %span.care
         %ul.dropdown-menu
           %li

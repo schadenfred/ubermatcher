@@ -6,10 +6,7 @@
       UberMatcher
     %h2 Helping nerds breed since 2012
     %p
-      %a.btn.btn-primary.btn-large
-        = link_to('Breed your nerds', new_user_registration_path)
-
-        = link_to('Breed your nerds', new_user_registration_path, class: "btn btn-large")
+      = link_to('Sign up to breed your nerds » ', new_user_registration_path, class: "btn btn-large")
   .row-fluid 
     .span4
       %h2.span2.badge.badge-info Step 1: 
@@ -28,7 +25,7 @@
     .span4 
       Import your list of single friends who you haven't been able to set up already, because they are nerds, from Facebook.
       %p
-        %a.btn{:href => "#"} View details » 
+        %a.btn{:href => "#"} View details »  
     .span4
       Work with other ubermatchers to make introductions between compatible nerds.  Talk to other matchmakers, review their friend lists, and decide on where to set your (mutual) friends up on a blind date.
       %p
