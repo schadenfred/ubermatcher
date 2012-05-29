@@ -7,6 +7,7 @@ Feature: Sign up
     Given no emails have been sent
     And no user exists with an email of "sarahsilverman@test.com"
     And I am on the home page
+    Then show me the page
     And I am not authenticated
     # And I follow the "Sign up" link
     # Then I should see "| Sign up" in the title

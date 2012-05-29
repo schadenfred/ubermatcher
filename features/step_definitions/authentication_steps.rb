@@ -5,12 +5,25 @@ Given /^no user exists with an email of "(.*?)"$/ do |email|
   end
 end
 
+Then /^show me the page$/ do
+  save_and_open_page
+end
+
+
+# Given /^I am not authenticated$/ do
+#   if find_link("Sign Out").visible?
+#     click_link "Sign Out"
+#   end
+    
+# end
+
 Given /^I am not authenticated$/ do
-  visit('/users/sign_out')
+  user = Factory.create(:user)
+  logout(:user)
 end
 
 And /^I am on the home page$/ do
-  visit('/')
+  visit '/'
 end
 
 

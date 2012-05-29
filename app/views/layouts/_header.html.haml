@@ -22,7 +22,7 @@
             %li.divider
             %li
               /%a{:href => "#"} Sign Out
-              = link_to("Sign out", destroy_user_session_path)
+              = link_to("Sign out", destroy_user_session_path, method: :delete)
           - else
             %li
               = link_to("Sign Up", new_user_registration_path)
