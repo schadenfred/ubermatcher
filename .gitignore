@@ -3,7 +3,8 @@
 
 # Ignore the default SQLite database.
 /db/*.sqlite3
-/db/*.ubermatcher
+/db/test.ubermatcher
+/db/development.ubermatcher
 
 # Ignore all logfiles and tempfiles.
 /log/*.log

@@ -29,6 +29,7 @@ end
 Spork.each_run do
 
   FactoryGirl.reload
+  Warden.test_mode!
 
   Dir["#{Rails.root}/app/controllers//*.rb"].each do |controller|
     load controller
