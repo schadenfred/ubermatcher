@@ -7,13 +7,14 @@
       = render 'layouts/header'
       = javascript_include_tag "application"
       = javascript_include_tag :defaults
+      = render 'shared/flash_messages', :locals => {:flash => flash}
+
     .container-fluid
       .row-fluid
         .span3
           = yield :column1
         .span9
-          = yield :column2
-          
+          = yield :column2       
       %hr
         %footer
           %p © UberMatcher 2012

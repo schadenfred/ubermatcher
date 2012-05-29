@@ -1,14 +1,20 @@
 class RegistrationsController < Devise::RegistrationsController
+  
+  def new
+    @title = "step fred"
+  end
+
   def create
     @title = "Step 1: Sign up"
     @user = User.new(params[:user])
     if @user.save
-      redirect_to :about_path
+      render :new, notice: "outstanding"
       # render 'confirmations/new'
     else
-      redirect_to :about_path
+      redirect_to :about
     end
   end
+  
 
    
 end

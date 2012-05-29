@@ -12,8 +12,7 @@ Feature: Sign up
     And I fill in the following:
       | Email                 | sarah.silverman@test.com     |
     And I press "Sign up"
-    Then show me the page
-    # Then I should see "| Sign up" in the title
+    Then I should see "| Sign up" in the title
 
   Scenario: unregistered user signs up with Facebook
   
