@@ -5,11 +5,16 @@ Given /^no user exists with an email of "(.*?)"$/ do |email|
   end
 end
 
-Given /^I am not logged in$/ do
-  pending # express the regexp above with the code you wish you had
+Given /^I am not authenticated$/ do
+  visit('/users/sign_out')
 end
 
-Given /^I am on the home page$/ do
+And /^I am on the home page$/ do
+  visit('/')
+end
+
+
+Given /^I am not logged in$/ do
   pending # express the regexp above with the code you wish you had
 end
 

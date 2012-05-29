@@ -1,6 +1,8 @@
 Ubermatcher::Application.routes.draw do
 
-  devise_for :users, :controllers => {:sessions => 'sessions', :confirmations => 'confirmations'}
+  devise_for :users, controllers: {
+    :sessions => 'sessions', 
+    :confirmations => 'confirmations'}
 
   devise_scope :user do
     put "/confirm" => "confirmations#confirm"
