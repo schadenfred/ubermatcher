@@ -27,7 +27,10 @@ Given /^I follow the "(.*?)" link$/ do |arg1|
 end
 
 Then /^I should see "(.*?)" in the title$/ do |arg1|
-  pending # express the regexp above with the code you wish you had
+  # page.find('title', text: 'Ubermatchsdf')
+  page.should have_selector('title', text: arg1)
+  # page.find(:xpath, './/title', text: "#{arg1}")
+  # page.find(:xpath, '//title[contains('Sign Up')]')
 end
 
 When /^(?:|I )fill in the following:$/ do |fields|
