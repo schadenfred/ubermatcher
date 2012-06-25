@@ -9,6 +9,7 @@
 # Ignore all logfiles and tempfiles.
 /log/*.log
 /tmp
+bunlder_stubs/
 
 # Hide omniauth keys
 config/initializers/omniauth.rb

@@ -21,5 +21,10 @@ Ubermatcher::Application.routes.draw do
     root :to => 'pages#home'
   end
 
+  match '/auth/:provider/callback' => 'authentications#create'
+
+
+  resources :matches
+
   root to: 'pages#home' 
 end
