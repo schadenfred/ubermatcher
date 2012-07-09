@@ -12,12 +12,18 @@ Feature: Sign up
     And I fill in the following:
       | Email                 | sarah.silverman@test.com     |
     And I press "Sign up"
-    Then I should see "Sign up" in the title
+    And "sarah.silverman@test.com" should have 1 email
+    When I open the email
+    When I follow "Confirm my account" in the email
+    And I fill in the following:
+      | Password              | password        |
+      | Password confirmation | password        |
+    And I press "Choose my password"
+    Then I should see "successfully confirmed"
 
-  Scenario: unregistered user signs up with Facebook
+
   
   
-    # @wip
     # Scenario: Unregistered user signs up with valid email
     #   And I fill in the following:
     #     | Email                 | sarah.silverman@test.com     |

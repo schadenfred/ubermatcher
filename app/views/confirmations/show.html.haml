@@ -1,8 +1,8 @@
 - content_for :column2 do
-  %h2 You're almost done! Now create a password to securely access your account.
-  = simple_form_for(resource, :as => resource_name, :url => confirm_path) do |f|
-    = f.input :password, :input_html => {:autofocus => true}
-    = f.input :password_confirmation
-    = f.input :confirmation_token, :as => :hidden
-    .form-actions
-      = f.button :submit, "Sign up to get a confirmation email", class: 'btn-large btn-primary'
+	%h1 g4et some!
+	= simple_form_for(resource, :url => confirm_path, class: "form-horizontal") do |f|
+		= f.input   :password
+		= f.input   :password_confirmation
+		= f.input   :confirmation_token, as: :hidden
+		.form-actions
+			= f.button :submit, "Choose my password", class: "btn btn-primary"

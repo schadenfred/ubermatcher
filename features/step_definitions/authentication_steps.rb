@@ -47,10 +47,4 @@ Then /^I press "(.*?)"$/ do |arg1|
   click_button(arg1)
 end
 
-Then /^I should see "(.*?)"$/ do |arg1|
-  pending # express the regexp above with the code you wish you had
-end
 
-Then /^I should see confirmation instructions in the subject$/ do
-  pending # express the regexp above with the code you wish you had
-end

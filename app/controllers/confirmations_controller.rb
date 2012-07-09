@@ -1,5 +1,4 @@
 class ConfirmationsController < Devise::ConfirmationsController
-
   def show
     self.resource = resource_class.find_by_confirmation_token(params[:confirmation_token])
     super if resource.confirmed? 

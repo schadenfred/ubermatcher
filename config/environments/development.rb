@@ -5,6 +5,8 @@ Ubermatcher::Application.configure do
   # every request. This slows down response time but is perfect for development
   # since you don't have to restart the web server when you make code changes.
   config.cache_classes = false
+  config.preload_frameworks = false
+
 
   # Log error messages when you accidentally call methods on nil.
   config.whiny_nils = true
@@ -20,7 +22,7 @@ Ubermatcher::Application.configure do
 
 
   # change to false to prevent email from being sent during development
-  config.action_mailer.perform_deliveries = true
+  config.action_mailer.perform_deliveries = false
   config.action_mailer.raise_delivery_errors = true
   config.action_mailer.default :charset => "utf-8"
 

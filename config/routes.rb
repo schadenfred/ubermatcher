@@ -1,13 +1,15 @@
 Ubermatcher::Application.routes.draw do
 
   devise_for :users, controllers: {
-    :sessions => "sessions", 
-    :confirmations => "confirmations",
-    :registrations => "registrations"
+    # :sessions => "sessions", 
+    :confirmations => "confirmations" #,
+    # :registrations => "registrations"
   }
 
   devise_scope :user do
     put "/confirm" => "confirmations#confirm"
+    # match 'confirm_user', :to => 'confirmations#confirm_user'
+
   end
 
   match '/contact',             :to => 'pages#contact'
@@ -24,7 +26,7 @@ Ubermatcher::Application.routes.draw do
   match '/auth/:provider/callback' => 'authentications#create'
 
 
-  resources :matches
+  # resources :matches
 
   root to: 'pages#home' 
 end

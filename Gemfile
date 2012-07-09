@@ -1,13 +1,13 @@
 source 'https://rubygems.org'
 
-gem 'rails', '3.2.5'
+gem 'rails', '3.2.6'
 gem 'therubyracer'
 group :production do
   gem 'pg'
 end
 
 # Development Server
-gem 'thin'
+#gem 'thin'
 
 # Authentication
 gem 'devise'
@@ -16,9 +16,9 @@ gem 'omniauth-facebook'
 gem 'koala'
 
 group :assets do
-  gem 'sass-rails',   '~> 3.2.3'
-  gem 'coffee-rails', '~> 3.2.1'
-  gem 'uglifier', '>= 1.0.3'
+  gem 'sass-rails'
+  gem 'coffee-rails'
+  gem 'uglifier'
 
 end
 
@@ -59,13 +59,13 @@ end
 group :test do
 
   # Spork
-  gem 'spork', '0.9.0'
+  gem 'spork'
 
   # Cucumber
   gem 'email_spec'
   gem 'cucumber-rails', require: false
   gem 'capybara'
-  gem 'capybara-webkit', '0.10.1'
+  gem 'capybara-webkit'
   gem 'selenium-webdriver'
   gem 'database_cleaner'
   gem 'launchy'
@@ -82,6 +82,5 @@ group :test do
   gem 'guard-bundler'
   gem 'guard-livereload'
   gem 'guard-rails'
-  gem 'guard-sass'
 
 end
