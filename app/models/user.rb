@@ -5,7 +5,7 @@ class User < ActiveRecord::Base
          :validatable, :confirmable
 
   attr_accessible :email, :password, :password_confirmation, :remember_me,
-  				:name, :confirmed_at, :confirmation_token, :provider, :uid
+  				:name, :confirmed_at, :confirmation_token, :provider, :uid, :oauth_token
 
   def password_required?
     super if confirmed?
