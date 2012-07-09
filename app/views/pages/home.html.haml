@@ -7,6 +7,8 @@
     %h2 Helping nerds breed since 2012
     %p
       = link_to('Sign up to breed your nerds » ', new_user_registration_path, class: "btn btn-large")
+      / = link_to "Sign in with Facebook", user_omniauth_authorize_path(:facebook)
+
   .row-fluid 
     .span4
       .span4.badge.badge-info

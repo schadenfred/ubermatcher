@@ -19,6 +19,8 @@
           - if user_signed_in?
             %li
               %a{:href => "#"} Settings
+            %li   
+              = link_to "Sign in with Facebook", user_omniauth_authorize_path(:facebook)
             %li.divider
             %li= link_to "Sign out", destroy_user_session_path, method: :delete
           - else
