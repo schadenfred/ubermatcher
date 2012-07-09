@@ -7,7 +7,7 @@ group :production do
 end
 
 # Development Server
-#gem 'thin'
+gem 'thin'
 
 # Authentication
 gem 'devise'

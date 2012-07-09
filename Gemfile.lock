@@ -368,5 +368,6 @@ DEPENDENCIES
   steak
   taps
   therubyracer
+  thin
   uglifier
   wicked
