@@ -5,11 +5,12 @@
 /db/*.sqlite3
 /db/test.ubermatcher
 /db/development.ubermatcher
+db/development.ubermatcher
 
 # Ignore all logfiles and tempfiles.
 /log/*.log
 /tmp
-bunlder_stubs/
+bundler_stubs/
 
 # Hide omniauth keys
 config/initializers/omniauth.rb
