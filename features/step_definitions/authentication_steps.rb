@@ -17,13 +17,8 @@ And /^I am on the home page$/ do
   visit '/'
 end
 
-
-Given /^I am not logged in$/ do
-  pending # express the regexp above with the code you wish you had
-end
-
 Given /^I follow the "(.*?)" link$/ do |arg1|
-  click_link "Sign Up" 
+  click_link(arg1) 
 end
 
 Then /^I should see "(.*?)" in the title$/ do |arg1|
@@ -47,4 +42,10 @@ Then /^I press "(.*?)"$/ do |arg1|
   click_button(arg1)
 end
 
+Given /^I am on the facebook auth page$/ do
+  visit user_omniauth_authorize_path(:facebook)
+end
 
+Given /^I fill in "(.*?)" with "(.*?)"$/ do |arg1, arg2|
+  
+end

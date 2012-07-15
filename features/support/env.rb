@@ -8,7 +8,9 @@ Spork.prefork do
   require 'factory_girl_rails'
   require 'database_cleaner'
   require 'database_cleaner/cucumber'
-   
+  
+  OmniAuth.config.test_mode = true
+
   Capybara.save_and_open_page_path = 'tmp'
   Capybara.default_selector = :css
   Capybara.javascript_driver = :selenium

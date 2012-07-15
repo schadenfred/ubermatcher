@@ -1,13 +1,13 @@
 - content_for :column1 do
   = render 'layouts/sidebar'
-= content_for :column2 do
+- content_for :column2 do
   .hero-unit
     %h1#logo
       UberMatcher
     %h2 Helping nerds breed since 2012
     %p
       = link_to('Sign up to breed your nerds » ', new_user_registration_path, class: "btn btn-large")
-      = link_to "Sign in with Facebook", user_omniauth_authorize_path(:facebook)
+      = link_to "Sign in to UberMatch your Facebook friends", user_omniauth_authorize_path(:facebook)
 
   .row-fluid 
     .span4

@@ -1,18 +1,17 @@
 Ubermatcher::Application.routes.draw do
-
   
-  devise_for :users, controllers: {
-    :confirmations => "confirmations", 
-    :omniauth_callbacks => "users/omniauth_callbacks"
-  }
+  devise_for :users, path_names: {sign_in: "login", sign_out: "logout"},
+    controllers: {
+      :confirmations => "confirmations", 
+      :omniauth_callbacks => "omniauth_callbacks"
+    }
 
   devise_scope :user do
     put "/confirm" => "confirmations#confirm"
     get '/users/auth/:provider' => 'users/omniauth_callbacks#passthru'
-  
   end
   
-  match 'auth/:provider/callback', to: 'sessions#create'
+  match '/users/auth/:provider/callback', to: 'sessions#create'
   match 'auth/failure', to: redirect('/')
   match 'signout', to: 'sessions#destroy', as: 'signout'
   match '/contact',             :to => 'pages#contact'

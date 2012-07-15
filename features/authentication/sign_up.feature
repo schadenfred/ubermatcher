@@ -3,7 +3,7 @@ Feature: Sign up
   As an unregistered user
   I want to sign up
  
-  Scenario: Unregistered user signs up
+  Scenario: Unregistered user signs up without third party authentication
     Given no emails have been sent
     And no user exists with an email of "sarahsilverman@test.com"
     And I am on the home page
@@ -21,6 +21,10 @@ Feature: Sign up
     And I press "Choose my password"
     Then I should see "successfully confirmed"
 
+  @omniauth_test
+  Scenario: Unregisterd user signs in with Facebook
+    Given I am on the home page
+    # And I follow the "Sign in to UberMatch your Facebook friends" link
 
   
   

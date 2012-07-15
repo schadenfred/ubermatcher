@@ -36,6 +36,7 @@ ActiveRecord::Schema.define(:version => 20120709005911) do
     t.datetime "created_at",                             :null => false
     t.datetime "updated_at",                             :null => false
     t.string   "name"
+    t.string   "username"
     t.string   "provider"
     t.string   "uid"
     t.string   "oauth_token"
