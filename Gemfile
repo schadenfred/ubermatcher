@@ -32,10 +32,10 @@ gem 'haml-rails'
 gem 'kaminari'
 gem 'bourbon'
 gem 'best_in_place'
+gem 'faker', :require => false
 
 group :test, :development do
   gem 'sqlite3'
-  gem 'faker', :require => false
   gem 'hpricot'
   gem 'ruby_parser'
   gem 'taps'
