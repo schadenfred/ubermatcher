@@ -35,7 +35,7 @@ gem 'best_in_place'
 
 group :test, :development do
   gem 'sqlite3'
-  gem 'faker'
+  gem 'faker', :require => false
   gem 'hpricot'
   gem 'ruby_parser'
   gem 'taps'
