@@ -1,6 +1,6 @@
 source 'https://rubygems.org'
 
-gem 'rails', '3.2.6'
+gem 'rails', '3.2.7'
 gem 'therubyracer'
 group :production do
   gem 'pg'
@@ -55,6 +55,11 @@ group :test, :development do
   gem 'mailcatcher'
   
 end
+
+group :development do
+  gem 'nifty-generators'
+end
+
 
 group :test do
 

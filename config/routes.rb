@@ -27,8 +27,7 @@ Ubermatcher::Application.routes.draw do
 
   match '/auth/:provider/callback' => 'authentications#create'
 
-
-  # resources :matches
+  resources :after_signup
 
   root to: 'pages#home' 
 end
