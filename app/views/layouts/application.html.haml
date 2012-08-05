@@ -2,21 +2,22 @@
 %html{:lang => "en"}
   %head
     = render 'layouts/head'
-  %body
-    %header
-      = render 'layouts/header'
-      = javascript_include_tag "application"
-      = render 'shared/flash_messages', :locals => {:flash => flash}
-
-    .container-fluid
-      .row-fluid
-        .span3
-          = yield :column1
-        .span9
-          = yield :column2       
-      %hr
-        %footer
-          %p © UberMatcher 2012
-          = debug(params) if Rails.env.development?
-          %pre 
-            = current_user.to_yaml
+  %body#home{"data-spy" => "scroll"}
+    / set fix background for ie8 and below
+    /[if lt IE 9]
+      <img class="bg" src="img/bg_1.jpg" >
+    = render 'layouts/header'
+    = javascript_include_tag "application"
+    = render 'shared/flash_messages', :locals => {:flash => flash}
+    = yield
+    .span12
+      .span3
+        = yield :column1
+      .span9
+        = yield :column2       
+    %hr
+      %footer
+        %p © UberMatcher 2012
+        = debug(params) if Rails.env.development?
+        %pre 
+          = current_user.to_yaml

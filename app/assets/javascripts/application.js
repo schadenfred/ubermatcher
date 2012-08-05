@@ -14,5 +14,6 @@
 //= require jquery_ujs
 //= require bootstrap
 //= require jquery.purr
+//= require jquery.easing.1.3
 //= require best_in_place
 //= require_tree .
