@@ -58,6 +58,7 @@ end
 
 group :development do
   gem 'nifty-generators'
+  gem 'mailcatcher'
 end
 
 

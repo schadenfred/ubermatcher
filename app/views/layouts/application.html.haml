@@ -8,7 +8,8 @@
       <img class="bg" src="img/bg_1.jpg" >
     = render 'layouts/header'
     = javascript_include_tag "application"
-    = render 'shared/flash_messages', :locals => {:flash => flash}
+    .span12
+      = render 'shared/flash_messages', :locals => {:flash => flash}
     = yield
     .span12
       .span3
