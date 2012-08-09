@@ -22,7 +22,7 @@ Ubermatcher::Application.routes.draw do
   match '/signup',              :to => 'registrations#new'
   
   authenticated :user do
-    root :to => 'pages#home'
+    root :to => 'pages#about'
   end
 
   match '/auth/:provider/callback' => 'authentications#create'

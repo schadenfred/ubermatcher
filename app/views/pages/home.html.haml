@@ -1,79 +1,39 @@
-.container
-  %section.header
-    .white_box
-      .row
-        .span4
-          .text
-            %h1 Lorem ipsum
-            %h2 Nulla ultricies adipiscing
-            %br
-              %p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla ultricies adipiscing tortor, at tempor erat rhoncus nec.
-              %p Nullam quis sem vitae tortor convallis dignissim at et dui. Nullam in eros nulla, porttitor placerat lorem. Nunc ornare iaculis tincidunt.
-              %p Quisque vitae tempor nisi. Donec varius nulla id urna rhoncus ut mattis odio scelerisque. In hac habitasse platea dictumst.
-              %p Ut congue vestibulum facilisis. Cras a suscipit velit. Donec vehicula interdum facilisis.
-              Sed venenatis iaculis sapien, ut pretium lectus consequat eget. Maecenas quis massa in lorem sollicitudin venenatis. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Fusce venenatis nisi augue.
-        .span8
-          #myCarousel.carousel.slide
-            .carousel-inner
-              .item.active
 
-                %img{:alt => "", :src => "assets/bootstrap-mdo-sfmoma-01.jpg"}
-                  .carousel-caption
-                    %h4 First Project Description
-                    %p Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.
-              .item
-                %img{:alt => "", :src => "assets/bootstrap-mdo-sfmoma-02.jpg"}
-                  .carousel-caption
-                    %h4 Second Project Description
-                    %p Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.
-              .item
-                %img{:alt => "", :src => "assets/bootstrap-mdo-sfmoma-03.jpg"}
-                  .carousel-caption
-                    %h4 Third Project Description
-                    %p Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.
-            %a.left.carousel-control{"data-slide" => "prev", :href => "#myCarousel"} ‹
-            %a.right.carousel-control{"data-slide" => "next", :href => "#myCarousel"} ›
-
-  %section.header
-    .white_box
-      .row
-        .span4
-          .text
 - content_for :column1 do
   / = render 'layouts/sidebar'
 - content_for :column2 do
-  / .hero-unit
-  %h1#logo
-    UberMatcher
-  %h2 Helping nerds breed since 2012
-  %p
-    = link_to('Sign up to breed your nerds » ', new_user_registration_path, class: "btn btn-large")
-    = link_to "Sign in to UberMatch your Facebook friends", user_omniauth_authorize_path(:facebook)
+  .hero-unit
+    %h1#logo
+      UberMatcher
+    %h2 Helping nerds breed since 2012
+    %p
+      = link_to('Sign up to breed your nerds » ', new_user_registration_path, class: "btn btn-large")
+      = link_to "Sign in to UberMatch your Facebook friends", user_omniauth_authorize_path(:facebook)
 
-  .row-fluid 
-    .span4
-      .span4.badge.badge-info
-        %h3 Step 1: 
-      .span8
-        %h3 Violate the privacy of your nerds
-      Import your list of single friends who you haven't been able to set up already, because they are nerds, from Facebook.
-      %p
-        %a.btn{:href => "#"} View details »  
-    .span4
-      .span4.badge.badge-info 
-        %h3 Step 2: 
-      .span8
-        %h3 Match your nerds up with other nerds
-      Work with other ubermatchers to make introductions between compatible nerds.  Talk to other matchmakers, review their friend lists, and decide on where to set your (mutual) friends up on a blind date.
-      %p
-        %a.btn{:href => "#"} View details »
-    .span4
-      .span4.badge.badge-info 
-        %h3
-          Step 3:  
-      .span8
-        %h3 Watch your nerds breed
-      Not on a video, pervert.  On Facebook.  Using our app.  Over a period of years.  Get points for second dates, relationships, marriages, and children.  Yes, even if the kids are ugly.
-      %p
-        %a.btn{:href => "#"} View details »
-  
+    .row-fluid 
+      .span4
+        .span4.badge.badge-info
+          %h3 Step 1: 
+        .span8
+          %h3 Violate the privacy of your nerds
+        Import your list of single friends who you haven't been able to set up already, because they are nerds, from Facebook.
+        %p
+          %a.btn{:href => "#"} View details »  
+      .span4
+        .span4.badge.badge-info 
+          %h3 Step 2: 
+        .span8
+          %h3 Match your nerds up with other nerds
+        Work with other ubermatchers to make introductions between compatible nerds.  Talk to other matchmakers, review their friend lists, and decide on where to set your (mutual) friends up on a blind date.
+        %p
+          %a.btn{:href => "#"} View details »
+      .span4
+        .span4.badge.badge-info 
+          %h3
+            Step 3:  
+        .span8
+          %h3 Watch your nerds breed
+        Not on a video, pervert.  On Facebook.  Using our app.  Over a period of years.  Get points for second dates, relationships, marriages, and children.  Yes, even if the kids are ugly.
+        %p
+          %a.btn{:href => "#"} View details »
+    
